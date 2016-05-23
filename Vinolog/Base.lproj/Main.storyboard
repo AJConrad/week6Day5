@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="x1X-zx-Lqb">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Vinolog" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +19,300 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UCh-cp-wVy">
+                                <rect key="frame" x="20" y="72" width="560" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="UeZ-Ay-1eI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <connections>
+                                    <action selector="entryFieldsChanged" destination="BYZ-38-t0r" eventType="editingChanged" id="Hxf-8i-EU5"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VQl-45-WEj">
+                                <rect key="frame" x="20" y="110" width="560" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="jAN-RU-ouw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <connections>
+                                    <action selector="entryFieldsChanged" destination="BYZ-38-t0r" eventType="editingChanged" id="Jx6-pV-5YN"/>
+                                </connections>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wine" translatesAutoresizingMaskIntoConstraints="NO" id="Pzb-xe-AtJ">
+                                <rect key="frame" x="20" y="148" width="560" height="432"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80110847510000005" green="0.80110847510000005" blue="0.80110847510000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="VQl-45-WEj" firstAttribute="top" secondItem="UCh-cp-wVy" secondAttribute="bottom" constant="8" id="3cg-Sk-YpK"/>
+                            <constraint firstItem="UCh-cp-wVy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="9hC-8Z-10X"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Pzb-xe-AtJ" secondAttribute="bottom" constant="20" id="Eyy-6q-f7Y"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UCh-cp-wVy" secondAttribute="trailing" id="FpE-LB-fow"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="VQl-45-WEj" secondAttribute="leading" id="OSf-se-EC9"/>
+                            <constraint firstItem="Pzb-xe-AtJ" firstAttribute="top" secondItem="VQl-45-WEj" secondAttribute="bottom" constant="8" id="T0P-kU-t17"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Pzb-xe-AtJ" secondAttribute="leading" id="XI5-Ml-61Q"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="UCh-cp-wVy" secondAttribute="leading" id="nmy-ws-cB7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VQl-45-WEj" secondAttribute="trailing" id="tqB-kI-8ww"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Pzb-xe-AtJ" secondAttribute="trailing" id="tzL-8b-xJ7"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="DDo-bj-9gf">
+                        <leftBarButtonItems>
+                            <barButtonItem title="Log Out" id="myk-yz-xIk">
+                                <connections>
+                                    <action selector="logoutUserBarButton:" destination="BYZ-38-t0r" id="C12-gs-oDm"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="New User" id="evm-XW-prg">
+                                <connections>
+                                    <action selector="registerUserBarButton:" destination="BYZ-38-t0r" id="6af-Hv-fNM"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" title="Login" id="PQY-1G-MZM">
+                            <connections>
+                                <action selector="loginUserBarButton:" destination="BYZ-38-t0r" id="IVV-lh-k3T"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="emailEntryTextField" destination="UCh-cp-wVy" id="rgd-Qc-Hcz"/>
+                        <outlet property="loginButton" destination="PQY-1G-MZM" id="tSL-wU-WDw"/>
+                        <outlet property="passwordEntryTextField" destination="VQl-45-WEj" id="ONJ-fY-mie"/>
+                        <outlet property="registerButton" destination="evm-XW-prg" id="0ex-lv-kIP"/>
+                        <segue destination="FLQ-hP-3Si" kind="show" identifier="Register" id="8ek-06-UZu"/>
+                        <segue destination="FLQ-hP-3Si" kind="show" identifier="Login" id="dyP-69-OnX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1023" y="337"/>
+        </scene>
+        <!--Wine List-->
+        <scene sceneID="kGh-Xn-gad">
+            <objects>
+                <viewController id="FLQ-hP-3Si" customClass="WineTableViewController" customModule="Vinolog" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uKA-aX-KCa"/>
+                        <viewControllerLayoutGuide type="bottom" id="U2p-e0-V2L"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vml-EA-jbe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zbA-oq-ODo">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="6nC-JZ-UaL" detailTextLabel="bwO-pZ-fVc" style="IBUITableViewCellStyleSubtitle" id="Fxz-Mo-RYj">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fxz-Mo-RYj" id="zKi-8x-Xlv">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6nC-JZ-UaL">
+                                                    <rect key="frame" x="15" y="6" width="31.5" height="19.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bwO-pZ-fVc">
+                                                    <rect key="frame" x="15" y="25.5" width="40.5" height="13.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="f50-g8-L4A" kind="show" identifier="Detail" id="dsV-kA-SfT"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="FLQ-hP-3Si" id="NSt-C6-lxU"/>
+                                    <outlet property="delegate" destination="FLQ-hP-3Si" id="k0t-kU-gth"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="U2p-e0-V2L" firstAttribute="top" secondItem="zbA-oq-ODo" secondAttribute="bottom" id="Nd0-rO-a4q"/>
+                            <constraint firstItem="zbA-oq-ODo" firstAttribute="leading" secondItem="vml-EA-jbe" secondAttribute="leadingMargin" constant="-20" id="TLS-S8-R1j"/>
+                            <constraint firstItem="zbA-oq-ODo" firstAttribute="top" secondItem="uKA-aX-KCa" secondAttribute="bottom" constant="-64" id="hI4-Co-gOt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zbA-oq-ODo" secondAttribute="trailing" constant="-20" id="qGj-o4-dmA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Wine List" id="bga-ko-fny">
+                        <barButtonItem key="rightBarButtonItem" title="Add Wine" id="x5w-Wz-sMM">
+                            <connections>
+                                <segue destination="f50-g8-L4A" kind="show" identifier="Add" id="ow8-Bb-kg3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="wineTableView" destination="zbA-oq-ODo" id="N48-58-S6k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ebj-vH-rxG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1717" y="337"/>
+        </scene>
+        <!--Wine Detail-->
+        <scene sceneID="0Lw-zh-V3V">
+            <objects>
+                <viewController id="f50-g8-L4A" customClass="DetailViewController" customModule="Vinolog" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FXG-HS-Jnl"/>
+                        <viewControllerLayoutGuide type="bottom" id="gxl-JU-WFc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zwL-GV-rEX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Wine Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9fE-0h-WdA">
+                                <rect key="frame" x="20" y="72" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter WIne Variety" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kap-xU-pkp">
+                                <rect key="frame" x="20" y="148" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Wine Vintage" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aQh-A1-OHa">
+                                <rect key="frame" x="20" y="186" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Wine Category" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nun-Bt-nKj">
+                                <rect key="frame" x="20" y="110" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name of Winery" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IBz-Rc-Eoa">
+                                <rect key="frame" x="20" y="224" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="0f7-yE-HaR">
+                                <rect key="frame" x="0.0" y="262" width="600" height="134"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="134" id="Ecg-22-8IL"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="485664776.98237902">
+                                    <!--2016-05-23 02:52:56 +0000-->
+                                </date>
+                            </datePicker>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wTP-Un-lwN">
+                                <rect key="frame" x="20" y="404" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="wTP-Un-lwN" secondAttribute="height" multiplier="1:1" id="VbO-mX-DGF"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Rating Below" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QuA-uz-Mz6">
+                                <rect key="frame" x="268" y="404" width="312" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="zqp-xp-vDQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="fvC-oH-FE4">
+                                <rect key="frame" x="268" y="442" width="312" height="29"/>
+                                <segments>
+                                    <segment title="1"/>
+                                    <segment title="2"/>
+                                    <segment title="3"/>
+                                    <segment title="4"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="aQh-A1-OHa" secondAttribute="leading" id="0uc-3V-yyl"/>
+                            <constraint firstItem="Nun-Bt-nKj" firstAttribute="top" secondItem="9fE-0h-WdA" secondAttribute="bottom" constant="8" id="3Po-9P-J7B"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="IBz-Rc-Eoa" secondAttribute="leading" id="48b-HI-TcL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9fE-0h-WdA" secondAttribute="trailing" id="5Jy-Fg-dzc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aQh-A1-OHa" secondAttribute="trailing" id="8ZL-Mg-d7e"/>
+                            <constraint firstItem="IBz-Rc-Eoa" firstAttribute="top" secondItem="aQh-A1-OHa" secondAttribute="bottom" constant="8" id="Bif-dO-eiR"/>
+                            <constraint firstItem="9fE-0h-WdA" firstAttribute="top" secondItem="FXG-HS-Jnl" secondAttribute="bottom" constant="8" id="EYT-8B-DEu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kap-xU-pkp" secondAttribute="trailing" id="EyS-K7-8e3"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="wTP-Un-lwN" secondAttribute="leading" id="FB9-n3-9hd"/>
+                            <constraint firstItem="QuA-uz-Mz6" firstAttribute="top" secondItem="0f7-yE-HaR" secondAttribute="bottom" constant="8" id="Luo-c5-fbU"/>
+                            <constraint firstItem="QuA-uz-Mz6" firstAttribute="leading" secondItem="wTP-Un-lwN" secondAttribute="trailing" constant="8" id="MZm-gz-iOF"/>
+                            <constraint firstItem="0f7-yE-HaR" firstAttribute="top" secondItem="IBz-Rc-Eoa" secondAttribute="bottom" constant="8" id="Pgg-UE-QFR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QuA-uz-Mz6" secondAttribute="trailing" id="SQ4-k5-8kH"/>
+                            <constraint firstItem="wTP-Un-lwN" firstAttribute="top" secondItem="0f7-yE-HaR" secondAttribute="bottom" constant="8" id="T4s-tN-5yG"/>
+                            <constraint firstItem="fvC-oH-FE4" firstAttribute="leading" secondItem="wTP-Un-lwN" secondAttribute="trailing" constant="8" id="Z7t-1X-1iU"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Nun-Bt-nKj" secondAttribute="leading" id="ZD2-J6-VAo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IBz-Rc-Eoa" secondAttribute="trailing" id="ZRp-0u-5r4"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="kap-xU-pkp" secondAttribute="leading" id="adq-vg-TJ8"/>
+                            <constraint firstItem="gxl-JU-WFc" firstAttribute="top" secondItem="wTP-Un-lwN" secondAttribute="bottom" constant="-44" id="b2E-oc-Jrr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fvC-oH-FE4" secondAttribute="trailing" id="dLy-nl-NX1"/>
+                            <constraint firstItem="aQh-A1-OHa" firstAttribute="top" secondItem="kap-xU-pkp" secondAttribute="bottom" constant="8" id="feN-6S-Z2X"/>
+                            <constraint firstItem="kap-xU-pkp" firstAttribute="top" secondItem="Nun-Bt-nKj" secondAttribute="bottom" constant="8" id="mdN-4n-RLW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0f7-yE-HaR" secondAttribute="trailing" constant="-20" id="mxz-va-Mqt"/>
+                            <constraint firstItem="0f7-yE-HaR" firstAttribute="leading" secondItem="zwL-GV-rEX" secondAttribute="leadingMargin" constant="-20" id="uIU-zE-gWh"/>
+                            <constraint firstItem="fvC-oH-FE4" firstAttribute="top" secondItem="QuA-uz-Mz6" secondAttribute="bottom" constant="8" id="uka-Mj-0Mr"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="9fE-0h-WdA" secondAttribute="leading" id="wFI-Tm-IzJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Nun-Bt-nKj" secondAttribute="trailing" id="z9t-S6-Csu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Wine Detail" id="5DL-WK-I5w">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="Rac-CN-4gd">
+                            <connections>
+                                <action selector="saveBarButtonPressed:" destination="f50-g8-L4A" id="TfR-d4-E28"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="wineCategoryTextField" destination="Nun-Bt-nKj" id="RlY-Rp-L9q"/>
+                        <outlet property="wineDateDrunkPicker" destination="0f7-yE-HaR" id="UKW-6O-Yy2"/>
+                        <outlet property="wineNameTextField" destination="9fE-0h-WdA" id="vde-GX-TjD"/>
+                        <outlet property="winePictureImageView" destination="wTP-Un-lwN" id="s4k-Gk-53g"/>
+                        <outlet property="wineRatingSegControl" destination="fvC-oH-FE4" id="7o4-aD-y4f"/>
+                        <outlet property="wineVarietyTextField" destination="kap-xU-pkp" id="4nb-F1-jlj"/>
+                        <outlet property="wineVintageTextField" destination="aQh-A1-OHa" id="Qgc-a3-YOS"/>
+                        <outlet property="wineWineryTextField" destination="IBz-Rc-Eoa" id="5q2-qd-xFq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kWt-BI-ly0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2395" y="337"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Zbb-Fs-bGc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="x1X-zx-Lqb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="F4C-CH-Iz4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="qLR-VN-cKz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P7V-Wt-P3x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340" y="337"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="wine" width="3117" height="3167"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="dsV-kA-SfT"/>
+        <segue reference="8ek-06-UZu"/>
+    </inferredMetricsTieBreakers>
 </document>
