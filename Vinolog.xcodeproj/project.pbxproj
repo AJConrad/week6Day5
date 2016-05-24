@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		496CDE851CF3976A00D98938 /* WineCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496CDE841CF3976A00D98938 /* WineCamera.swift */; };
 		49B200FE1CEE3BD400B3FE69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B200FD1CEE3BD400B3FE69 /* AppDelegate.swift */; };
 		49B201001CEE3BD400B3FE69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B200FF1CEE3BD400B3FE69 /* ViewController.swift */; };
 		49B201031CEE3BD400B3FE69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49B201011CEE3BD400B3FE69 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		496CDE841CF3976A00D98938 /* WineCamera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WineCamera.swift; sourceTree = "<group>"; };
 		49B200FA1CEE3BD400B3FE69 /* Vinolog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vinolog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49B200FD1CEE3BD400B3FE69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49B200FF1CEE3BD400B3FE69 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				49B201011CEE3BD400B3FE69 /* Main.storyboard */,
 				49B2010F1CEE554A00B3FE69 /* Wine.swift */,
 				49B201151CEE5A8200B3FE69 /* LoginManager.swift */,
+				496CDE841CF3976A00D98938 /* WineCamera.swift */,
 				49B201041CEE3BD400B3FE69 /* Assets.xcassets */,
 				49B201061CEE3BD400B3FE69 /* LaunchScreen.storyboard */,
 				49B201091CEE3BD400B3FE69 /* Info.plist */,
@@ -229,6 +232,7 @@
 				49B201101CEE554A00B3FE69 /* Wine.swift in Sources */,
 				49B201121CEE56F600B3FE69 /* WineTableViewController.swift in Sources */,
 				49B201161CEE5A8200B3FE69 /* LoginManager.swift in Sources */,
+				496CDE851CF3976A00D98938 /* WineCamera.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

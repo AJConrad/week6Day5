@@ -60,7 +60,7 @@ class ViewController: UIViewController {
     }
     
     func regSuccess() {
-        performSegueWithIdentifier("Register", sender: self)
+        performSegueWithIdentifier("Login", sender: self)
     }
     
     func regFail() {
